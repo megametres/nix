@@ -1,0 +1,95 @@
+[
+  {
+    "clock": {
+      "actions": {
+        "on-click": "shift_reset",
+        "on-click-right": "mode",
+        "on-scroll-down": "shift_down",
+        "on-scroll-up": "shift_up"
+      },
+      "calendar": {
+        "format": {
+          "days": "<span color='#ecc6d9'><b>{}</b></span>",
+          "months": "<span color='#ffead3'><b>{}</b></span>",
+          "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+          "weekdays": "<span color='#ffcc66'><b>{}</b></span>"
+        },
+        "mode": "month",
+        "mode-mon-col": 3,
+        "on-scroll": 1,
+        "weeks-pos": ""
+      },
+      "format": "{:%T}",
+      "format-alt": "{:%T}",
+      "interval": 1,
+      "tooltip-format": "<tt>{calendar}</tt>"
+    },
+    "cpu": {
+      "format": "  {usage}%",
+      "tooltip": false
+    },
+    "custom/power": {
+      "format": "<span>⏻</span> ",
+      "on-click": "wleave -b 2",
+      "tooltip": false
+    },
+    "custom/audiooutput": {
+        "exec": "/home/metres/nix/bin/audio_icon.sh",
+        "signal": 10,
+        "format": "{} ",
+        "on-click": "/home/metres/nix/bin/toggle_audio_output.sh"
+    },
+    "custom/tempspacer": {
+      "format": "<span>/</span> ",
+      "tooltip": false
+    },
+    "height": 40,
+    "hyprland/workspaces": {
+      "all-outputs": true,
+      "disable-scroll": true,
+      "on-click": "activate",
+      "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": []
+      }
+    },
+    "layer": "bottom",
+    "memory": {
+      "format": "  {}%",
+      "tooltip": false
+    },
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
+    "modules-left": [],
+    "modules-right": [
+      "custom/audiooutput",
+      "pulseaudio/slider",
+      "cpu",
+      "custom/tempspacer",
+      "temperature#cpu",
+      "memory",
+      "custom/tempspacer",
+      "temperature#gpu",
+      "clock",
+      "custom/power"
+    ],
+    "position": "bottom",
+    "pulseaudio/slider": {
+      "max": 100,
+      "min": 0,
+      "orientation": "horizontal",
+    },
+    "temperature#cpu": {
+      "format": "{temperatureC}°C",
+      "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input"
+    },
+    "temperature#gpu": {
+      "format": "{temperatureC}°C",
+      "hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input"
+    }
+  }
+]

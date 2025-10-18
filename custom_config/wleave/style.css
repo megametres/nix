@@ -1,0 +1,71 @@
+* {
+  background-image: none;
+}
+
+window {
+    background-color: #$${primaryColor1}cc;
+    padding:0px 250px;
+}
+
+button {
+  font-family: "$${digitalFont}";
+  font-size: 38px;
+  color: #$${primaryColor4};
+  background-color: #$${primaryColor2};
+  background-repeat: no-repeat;
+  background-position: 160px 50px;
+  border-color: #$${primaryColor3};
+  border-style: solid;
+  border-width: 2px;
+  margin:12px;
+  transition: all 0.5s ease-in-out;
+}
+
+button:focus,
+button:active,
+button:hover {
+  color: #$${primaryColor5};
+  background-color: #$${primaryColor3};
+  border-color: #$${primaryColor4};
+  outline-style: none;
+}
+
+#logout {
+    background-image: url("icons/logout.png"),
+      url("icons/logout.png");
+}
+
+#logout:focus, #logout:active, #logout:hover {
+    background-image: url("icons/logout-hover.png"),
+      url("icons/logout-hover.png");
+}
+
+#suspend {
+    background-image: url("icons/sleep.png"),
+    url("icons/sleep.png");
+}
+
+#suspend:focus, #suspend:active, #suspend:hover {
+    background-image: url("icons/sleep-hover.png"),
+    url("icons/sleep-hover.png");
+}
+
+#shutdown {
+    background-image: url("icons/power.png"),
+      url("icons/power.png");
+}
+
+#shutdown:focus, #shutdown:active, #shutdown:hover {
+    background-image: url("icons/power-hover.png"),
+      url("icons/power-hover.png");
+}
+
+#reboot {
+    background-image: url("icons/restart.png"),
+      url("icons/restart.png");
+}
+
+#reboot:focus, #reboot:active, #reboot:hover {
+    background-image: url("icons/restart-hover.png"),
+      url("icons/restart-hover.png");
+}

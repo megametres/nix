@@ -1,0 +1,124 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-size: 13px;
+    min-height: 0;
+    font-family: "$${digitalFont}";
+    letter-spacing:2px;
+}
+
+window#waybar {
+    background: #$${primaryColor2};
+    color: #$${primaryColor5};
+}
+
+#clock, #cpu, #memory, #temperature, #network, #pulseaudio {
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+#clock {
+    font-size: 30px;
+    padding: 0 10px;
+}
+
+#custom-power{
+    font-size:22px;
+    color: #$${primaryGreen};
+    transition: color 0.5s ease-in-out;
+}
+
+#custom-power:hover{
+    color: #$${primaryRed};
+}
+
+#cpu{
+    background: #$${primaryColor3};
+    margin:7px 0;
+    padding:4px 0 4px 9px;
+    border-radius: 10px 0 0 10px;
+    font-size: 18px;
+}
+
+#memory{
+    background: #$${primaryColor3};
+    margin:7px 0 7px 7px;
+    padding:4px 0 4px 9px;
+    border-radius: 10px 0 0 10px;
+    font-size: 18px;
+}
+
+#temperature{
+    background: #$${primaryColor3};
+    margin:7px 0;
+    padding:4px 9px 4px 0;
+    border-radius: 0 10px 10px 0;
+    font-size: 18px;
+}
+
+#temperature > span{
+    padding: 0 4px;
+}
+
+#temperature.gpu{
+    background: #$${primaryColor3};
+}
+
+#custom-tempspacer{
+    background: #$${primaryColor3};
+    margin:7px -4px 7px 0;
+    font-size: 18px;
+    padding:0 0 0 5px;
+    letter-spacing:0;
+}
+
+#custom-audiooutput{
+    font-size:24px;
+    color: #$${primaryColor4};
+    margin-right: -12px;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+  	background-color: #$${primaryColor1};
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+  	background-color: #$${primaryColor4};
+}
+
+#workspaces button{
+    background: #$${primaryColor4};
+    padding:0 10px;
+    margin: 4px;
+    border-radius: 10px;
+    transition: background 0.35s ease-in-out;
+    transition: color 0.35s ease-in-out;
+}
+#workspaces button label{
+    font-size: 22px;
+}
+
+#workspaces button:first-child label{
+    margin-left:-5px;
+}
+#workspaces button.active{
+    background: #$${primaryColor3};
+    color: #$${primaryColor5};
+}
+#workspaces button:hover{
+    background: #$${primaryColor3};
+    color: #$${primaryColor5};
+    box-shadow: none;
+}
